@@ -11,7 +11,7 @@ def homepage():
     """Showing the board"""
     board = boggle_game.make_board()
     session['board']=[]
-    return render_template('index.html')
+    return render_template('index.html', board=board)
 
 
 
