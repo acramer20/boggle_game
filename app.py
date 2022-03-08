@@ -15,3 +15,10 @@ def homepage():
 
 
 
+@app.route("/check-word")
+def check_word():
+    word = request.args['word']
+    board = session['board']
+    response = boggle_game.check_valid_word(board, word)
+    return jsonify({"result": response})
+
