@@ -7,6 +7,7 @@
     <title>HomePage</title>
 </head>
 <body>
+<section id="boggle">
     <table class ="board">
         <tbody>
             {%for row in board%}
@@ -18,15 +19,23 @@
             {%endfor%}
         </tbody>
     </table>
+   
 
     <form method="POST" class="guess">
-        <input type="text" class="word" autofocus>
+        <input type="text" class="word" name="word" autofocus >
         <button>Guess!</button>
 
 
     </form>
-
+    <p class="msg">
+        <!-- Putting the Message here through js. -->
+    </p>
+    <ul class="words">
+        <!-- the list of words here as they are getting scored -->
+    </ul>
+</section>
     <script src="app.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script> let game = new BoggleGame("boggle", 60);</script>
 </body>
 </html>
