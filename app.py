@@ -14,8 +14,6 @@ def homepage():
     session['board']= board
     return render_template('index.html', board=board)
 
-
-
 @app.route("/check-word")
 def check_word():
     """checking if word is in dictionary/board"""
