@@ -36,7 +36,7 @@ class FlaskTests(TestCase):
     def test_non_english_word(self):
         """testing to for a made up word"""
         self.client.get('/')
-        response = self.client.get('/check-word?=sdjknsjalbvsjhdfv')
+        response = self.client.get('/check-word?word=sdjknsjalbvsjhdfv')
         self.assertEqual(response.json['result'],'not-word')
 
     
